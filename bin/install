@@ -17,7 +17,7 @@ install_mongo() {
   [ "Linux" = "$(uname)" ] && platform="linux" || platform="osx"
   arch="i686"
   [ "x86_64" = "$(uname -m)" ] && arch="x86_64"
-  [ "arm64" = "$(uname -m)" ] && arch="arm64"
+  [ "arm64" = "$(uname -m)" ] && arch="x86_64"
   [ "linux" = "${platform}" ] && tempdir=$(mktemp -d asdf-mongodb.XXXX) || tempdir=$(mktemp -dt asdf-mongodb.XXXX)
 
   if [[ "linux" = "${platform}" ]]; then
